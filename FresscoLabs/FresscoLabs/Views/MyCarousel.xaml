@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FresscoLabs.Views.MyCarousel">
+    <CarouselPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,40,0,0" Android="0,40,0,0" />
+    </CarouselPage.Padding>
+    <ContentPage>
+        <StackLayout>
+            <Label Text="Page 1" FontSize="Medium" HorizontalOptions="Center" />
+            <BoxView Color="Green" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout>
+            <Label Text="Page 2" FontSize="Medium" HorizontalOptions="Center" />
+            <Image Source="menu2.png" HorizontalOptions="Center" Margin="0,20"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout>
+            <Label Text="Page 3" FontSize="Medium" HorizontalOptions="Center" />
+            <Button BackgroundColor="Blue" WidthRequest="200" HeightRequest="80" HorizontalOptions="Center"  Text="Start" TextColor="White" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>

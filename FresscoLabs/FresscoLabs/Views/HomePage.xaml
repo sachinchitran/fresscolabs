@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FresscoLabs.Views.HomePage">
+    <!--<ContentPage.Content>
+        <StackLayout Spacing="0" Orientation="Horizontal">
+            <ScrollView BackgroundColor="Orange" Orientation="Horizontal" HeightRequest="150" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+                <StackLayout Spacing="0" Orientation="Horizontal">
+                    <BoxView Color="Yellow" VerticalOptions="Fill"/>
+                    <BoxView Color="Red" WidthRequest="100" VerticalOptions="Fill"/>
+                    <BoxView Color="Yellow" VerticalOptions="Fill"/>
+                    <BoxView Color="Red" WidthRequest="100" VerticalOptions="Fill"/>
+                    <BoxView Color="Yellow" VerticalOptions="Fill"/>
+                    <BoxView Color="Red" WidthRequest="100" VerticalOptions="Fill"/>
+                    <BoxView Color="Yellow" VerticalOptions="Fill"/>
+                    <BoxView Color="Red" WidthRequest="100" VerticalOptions="Fill" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>-->
+
+    <!--<ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="Orange">
+            -->
+    <!--<Label Text="I'm centered on iPhone 4 but no other device" AbsoluteLayout.LayoutBounds="110,300,150,300" LineBreakMode="WordWrap" />-->
+    <!--
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0,0,1,100" AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional" />
+            <BoxView BackgroundColor="Black" AbsoluteLayout.LayoutBounds=".5,80,50,50" AbsoluteLayout.LayoutFlags="XProportional" LineBreakMode="WordWrap"  />
+            <Entry Text="Bio + Hashtags" TextColor="White"
+                    BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds=".5,180,.9,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+        </AbsoluteLayout>
+    </ContentPage.Content>-->
+
+    <!--<RelativeLayout BackgroundColor="Yellow">
+        <BoxView Color="Red" x:Name="redBox"
+        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=.1,Constant=0}"
+        RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+        RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Height,Factor=.8,Constant=0}" />
+    </RelativeLayout>-->
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="plainButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="40" />
+            </Style>
+            <Style x:Key="darkerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#ddd"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="40" />
+            </Style>
+            <Style x:Key="orangeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#E8AD00"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="40" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid x:Name="controlGrid" RowSpacing="3" ColumnSpacing="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="0" Grid.Row="0" HorizontalTextAlignment="End" VerticalTextAlignment="End" TextColor="White"
+        FontSize="60" Grid.ColumnSpan="4" />
+            <Button Text = "C" Grid.Row="1" Grid.Column="0"
+        Style="{StaticResource darkerButton}" />
+            <Button Text = "+/-" Grid.Row="1" Grid.Column="1"
+        Style="{StaticResource darkerButton}" />
+            <Button Text = "%" Grid.Row="1" Grid.Column="2"
+        Style="{StaticResource darkerButton}" />
+            <Button Text = "div" Grid.Row="1" Grid.Column="3"
+        Style="{StaticResource orangeButton}" />
+            <Button Text = "7" Grid.Row="2" Grid.Column="0"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "8" Grid.Row="2" Grid.Column="1"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "9" Grid.Row="2" Grid.Column="2"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "X" Grid.Row="2" Grid.Column="3"
+        Style="{StaticResource orangeButton}" />
+            <Button Text = "4" Grid.Row="3" Grid.Column="0"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "5" Grid.Row="3" Grid.Column="1"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "6" Grid.Row="3" Grid.Column="2"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "-" Grid.Row="3" Grid.Column="3"
+        Style="{StaticResource orangeButton}" />
+            <Button Text = "1" Grid.Row="4" Grid.Column="0"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "2" Grid.Row="4" Grid.Column="1"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "3" Grid.Row="4" Grid.Column="2"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "+" Grid.Row="4" Grid.Column="3"
+        Style="{StaticResource orangeButton}" />
+            <Button Text = "0" Grid.ColumnSpan="2"
+        Grid.Row="5" Grid.Column="0" Style="{StaticResource plainButton}" />
+            <Button Text = "." Grid.Row="5" Grid.Column="2"
+        Style="{StaticResource plainButton}" />
+            <Button Text = "=" Grid.Row="5" Grid.Column="3"
+        Style="{StaticResource orangeButton}" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

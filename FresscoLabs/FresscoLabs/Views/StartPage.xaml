@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FresscoLabs.Views.StartPage">
+    <ContentPage.Content>
+        <Grid x:Name="controlGrid" BackgroundColor="Yellow" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid x:Name="topRowHeaderGrid" Grid.Row="0" BackgroundColor="#03AC3C">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Image Source="hamburger.png" WidthRequest="32" Grid.Column="0" Margin="10,0,0,0"/>
+                <Label Text="FRESSCO" TextColor="White" FontSize="27" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </Grid>
+
+            <Grid x:Name="menuItemsGrid" Grid.Row="1" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Choose your category to order" TextColor="Black" FontSize="18" 
+                       Grid.Row="0" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Image Source="menu1.png" Grid.Row="1" Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="menu2.png" Grid.Row="1" Grid.Column="1" />
+                <Image Source="menu3.png" Grid.Row="1" Grid.Column="2" HorizontalOptions="Start" WidthRequest="48" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

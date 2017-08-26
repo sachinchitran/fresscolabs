@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FresscoLabs.Views.OurTabbledPage">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Vegetables">
+        <ContentPage.Content>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Hello first tab"/>
+                <Image Source="menu2.png" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Fruits">
+        <ContentPage.Content>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Hello Fruits"/>
+                <Image Source="menu1.png" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Groceries">
+        <ContentPage.Content>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Hello Groceries"/>
+                <Image Source="menu2.png" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Poultry">
+        <ContentPage.Content>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Hello Poultry"/>
+                <Image Source="menu1.png" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>
